@@ -1,0 +1,84 @@
+[ 2025-09-21 20:11:44,048 ] 6 src.networksecurity - INFO - Triggering Training Pipeline from main.py
+[ 2025-09-21 20:11:44,048 ] 8 src.networksecurity - INFO - Starting Training Pipeline
+[ 2025-09-21 20:11:44,048 ] 13 src.networksecurity - INFO - Inside initiate_training_pipeline method
+[ 2025-09-21 20:11:44,048 ] 14 src.networksecurity - INFO - Starting Data Ingestion Pipeline from Training Pipeline
+[ 2025-09-21 20:11:44,048 ] 8 src.networksecurity - INFO - Starting Data Ingestion Pipeline
+[ 2025-09-21 20:11:44,048 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:44,048 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:44,048 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:44,059 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:44,060 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:44,062 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:44,064 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:44,067 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:44,073 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:44,073 ] 19 src.networksecurity - INFO - Inside get_data_ingestion_config method
+[ 2025-09-21 20:11:44,073 ] 21 src.networksecurity - INFO - Creating artifacts directory for data_ingestion
+[ 2025-09-21 20:11:44,076 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:44,076 ] 29 src.networksecurity - INFO - Directory created at: artifacts\data_ingestion
+[ 2025-09-21 20:11:44,076 ] 13 src.networksecurity - INFO - Inside initiate_data_ingestion_pipeline method
+[ 2025-09-21 20:11:44,076 ] 13 src.networksecurity - INFO - Starting Data Ingestion
+[ 2025-09-21 20:11:44,076 ] 36 src.networksecurity - INFO - Inside connect_mongodb method
+[ 2025-09-21 20:11:44,272 ] 39 src.networksecurity - INFO - Connected to MongoDB successfully
+[ 2025-09-21 20:11:44,272 ] 37 src.networksecurity - INFO - Inside initiate_data_ingestion method
+[ 2025-09-21 20:11:44,274 ] 20 src.networksecurity - INFO - Inside export_collection_as_dataframe method
+[ 2025-09-21 20:11:46,507 ] 28 src.networksecurity - INFO - Data exported as dataframe
+[ 2025-09-21 20:11:46,509 ] 39 src.networksecurity - INFO - Saving raw data into csv file
+[ 2025-09-21 20:11:46,651 ] 42 src.networksecurity - INFO - Raw data saved successfully
+[ 2025-09-21 20:11:46,653 ] 16 src.networksecurity - INFO - Data Ingestion Pipeline completed successfully
+[ 2025-09-21 20:11:46,660 ] 16 src.networksecurity - INFO - Data Ingestion Pipeline completed
+[ 2025-09-21 20:11:46,660 ] 17 src.networksecurity - INFO - Starting Data validation Pipeline from Training Pipeline
+[ 2025-09-21 20:11:46,662 ] 7 src.networksecurity - INFO - Initializing DataValidationPipeline
+[ 2025-09-21 20:11:46,664 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:46,678 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:46,687 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:46,693 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:46,693 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:46,693 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:46,693 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:46,708 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:46,710 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:46,710 ] 36 src.networksecurity - INFO - Inside get_data_validation_config method
+[ 2025-09-21 20:11:46,710 ] 38 src.networksecurity - INFO - creating directory for data_validation stage
+[ 2025-09-21 20:11:46,710 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:46,710 ] 29 src.networksecurity - INFO - Directory created at: artifacts\data_validation
+[ 2025-09-21 20:11:46,710 ] 12 src.networksecurity - INFO - Inside initiate_data_validation_pipeline
+[ 2025-09-21 20:11:46,710 ] 9 src.networksecurity - INFO - Initiatlized Data Validation
+[ 2025-09-21 20:11:46,725 ] 17 src.networksecurity - INFO -  Inside initiate_data_validation method
+[ 2025-09-21 20:11:46,816 ] 26 src.networksecurity - INFO - All columns are present in the raw data
+[ 2025-09-21 20:11:46,829 ] 29 src.networksecurity - INFO - Raw data length:11055
+[ 2025-09-21 20:11:46,830 ] 30 src.networksecurity - INFO - train data length:8844
+[ 2025-09-21 20:11:46,838 ] 31 src.networksecurity - INFO - test data length:2211
+[ 2025-09-21 20:11:46,940 ] 34 src.networksecurity - INFO - train data saved into: artifacts/data_validation/train.csv
+[ 2025-09-21 20:11:46,950 ] 36 src.networksecurity - INFO - test data saved into: artifacts/data_validation/test.csv
+[ 2025-09-21 20:11:46,960 ] 19 src.networksecurity - INFO - Data Validation stage complete
+[ 2025-09-21 20:11:46,975 ] 20 src.networksecurity - INFO - Starting Data Transformation Pipeline
+[ 2025-09-21 20:11:46,975 ] 7 src.networksecurity - INFO - Initializing Data Transformation Pipeline
+[ 2025-09-21 20:11:46,975 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:46,977 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:46,979 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:47,003 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:47,007 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:47,007 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:47,009 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:47,009 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:47,009 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:47,011 ] 55 src.networksecurity - INFO - Inside get_data_transformation_config method
+[ 2025-09-21 20:11:47,011 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:47,011 ] 29 src.networksecurity - INFO - Directory created at: artifacts/data_transformation
+[ 2025-09-21 20:11:47,011 ] 12 src.networksecurity - INFO - Inside initiate_data_transformartion
+[ 2025-09-21 20:11:47,016 ] 12 src.networksecurity - INFO - Initializing DataTransformation
+[ 2025-09-21 20:11:47,021 ] 42 src.networksecurity - INFO - Inside initiate_data_transformation method
+[ 2025-09-21 20:11:47,069 ] 26 src.networksecurity - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2025-09-21 20:11:47,070 ] 31 src.networksecurity - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-09-21 20:11:47,078 ] 53 src.networksecurity - INFO - Inside save_numpy_array_data method
+[ 2025-09-21 20:11:47,106 ] 54 src.networksecurity - INFO - train.npy saved in: artifacts/data_transformation/train.npy
+[ 2025-09-21 20:11:47,154 ] 53 src.networksecurity - INFO - Inside save_numpy_array_data method
+[ 2025-09-21 20:11:47,154 ] 64 src.networksecurity - INFO - test.npy saved in: artifacts/data_transformation/test.npy
+[ 2025-09-21 20:11:47,154 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:47,154 ] 29 src.networksecurity - INFO - Directory created at: data
+[ 2025-09-21 20:11:47,160 ] 64 src.networksecurity - INFO - Entered the save_object method of MainUtils class
+[ 2025-09-21 20:11:47,167 ] 68 src.networksecurity - INFO - Exited the save_object method of MainUtils class
+[ 2025-09-21 20:11:47,172 ] 69 src.networksecurity - INFO - preprocessor model saved in: data/preprocessor.pkl
+[ 2025-09-21 20:11:47,172 ] 22 src.networksecurity - INFO - Data Transformation stage completed
+[ 2025-09-21 20:11:47,174 ] 8 src.networksecurity - INFO - Training Pipeline completed successfully

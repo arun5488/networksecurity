@@ -10,3 +10,13 @@ data_validation:
   raw_data: artifacts/data_ingestion/raw_data.csv
   train_data: artifacts/data_validation/train.csv
   test_data: artifacts/data_validation/test.csv
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  train_data: artifacts/data_validation/train.csv
+  test_data: artifacts/data_validation/test.csv  
+  target_column: Result
+  train_npy: artifacts/data_transformation/train.npy
+  test_npy: artifacts/data_transformation/test.npy
+  y_train: artifacts/data_transformation/y_train.csv
+  y_test: artifacts/data_transformation/y_test.csv

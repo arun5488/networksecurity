@@ -1,4 +1,4 @@
-from src.networksecurity.entity import DataIngestionConfig, DataValidationConfig
+from src.networksecurity.entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
 from src.networksecurity import logger
 from src.networksecurity.utils.common import read_yaml, create_directories
 from pathlib import Path
@@ -48,4 +48,27 @@ class ConfigurationManager:
             )
         except Exception as e:
             logger.error(f"Error in get_data_validation_config: {e}")
+            raise e
+    
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        try:
+            logger.info("Inside get_data_transformation_config method")
+            data_transformation_config = self.config.data_transformation
+
+            create_directories([data_transformation_config.root_dir])
+
+            return DataTransformationConfig(
+                root_dir = data_transformation_config.root_dir,
+                train_data = data_transformation_config.train_data,
+                test_data = data_transformation_config.test_data,
+                target_column = data_transformation_config.target_column,
+                train_npy = data_transformation_config.train_npy,
+                test_npy = data_transformation_config.test_npy,
+                y_train = data_transformation_config.y_train,
+                y_test = data_transformation_config.y_test,
+                knn_inputer = const.DATA_TRANSFORMATION_IMPUTER_PARAMS
+            )
+
+        except Exception as e:
+            logger.error(f"Error occured inside get_data_transformation_config: {e}")
             raise e
