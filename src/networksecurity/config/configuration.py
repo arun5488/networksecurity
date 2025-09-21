@@ -1,4 +1,4 @@
-from src.networksecurity.entity import DataIngestionConfig
+from src.networksecurity.entity import DataIngestionConfig, DataValidationConfig
 from src.networksecurity import logger
 from src.networksecurity.utils.common import read_yaml, create_directories
 from pathlib import Path
@@ -29,4 +29,23 @@ class ConfigurationManager:
 
         except Exception as e:
             logger.error(f"Error in get_data_ingestion_config: {e}")
+            raise e
+        
+    def get_data_validation_config(self) -> DataValidationConfig:
+        try:
+            logger.info("Inside get_data_validation_config method")
+            data_validation_config = self.config.data_validation
+            logger.info("creating directory for data_validation stage")
+            create_directories([Path(data_validation_config.root_dir)])
+
+            return DataValidationConfig(
+                root_dir = data_validation_config.root_dir,
+                raw_data= data_validation_config.raw_data,
+                train_data = data_validation_config.train_data,
+                test_data = data_validation_config.test_data,
+                train_test_split_ratio=const.TRAIN_TEST_SPLIT_RATIO,
+                columns=self.schema.columns
+            )
+        except Exception as e:
+            logger.error(f"Error in get_data_validation_config: {e}")
             raise e

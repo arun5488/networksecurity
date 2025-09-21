@@ -1,6 +1,12 @@
 artifacts_root: artifacts
 
 data_ingestion:
-  root_dir: data_ingestion
-  raw_data: data_ingestion/raw_data.csv
+  root_dir: artifacts/data_ingestion
+  raw_data: artifacts/data_ingestion/raw_data.csv
   target_column: Result
+
+data_validation:
+  root_dir: artifacts/data_validation
+  raw_data: artifacts/data_ingestion/raw_data.csv
+  train_data: artifacts/data_validation/train.csv
+  test_data: artifacts/data_validation/test.csv
