@@ -1,0 +1,12 @@
+pandas
+dotenv
+pymongo[srv]
+scikit-learn
+numpy
+mlflow
+dagshub
+fastapi
+Flask
+uvicorn
+dataclasses
+python-box
