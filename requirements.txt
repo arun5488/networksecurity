@@ -3,7 +3,7 @@ dotenv
 pymongo[srv]
 scikit-learn
 numpy
-mlflow
+mlflow<3
 dagshub
 fastapi
 Flask

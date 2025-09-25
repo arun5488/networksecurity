@@ -20,3 +20,9 @@ data_transformation:
   test_npy: artifacts/data_transformation/test.npy
   y_train: artifacts/data_transformation/y_train.csv
   y_test: artifacts/data_transformation/y_test.csv
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  train_npy: artifacts/data_transformation/train.npy
+  test_npy: artifacts/data_transformation/test.npy
+  model_name: artifacts/model_trainer/model.pkl

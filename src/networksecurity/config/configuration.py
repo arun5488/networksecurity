@@ -1,4 +1,4 @@
-from src.networksecurity.entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig
+from src.networksecurity.entity import DataIngestionConfig, DataValidationConfig, DataTransformationConfig, ModelTrainerConfig
 from src.networksecurity import logger
 from src.networksecurity.utils.common import read_yaml, create_directories
 from pathlib import Path
@@ -71,4 +71,24 @@ class ConfigurationManager:
 
         except Exception as e:
             logger.error(f"Error occured inside get_data_transformation_config: {e}")
+            raise e
+
+    def get_model_trainer_config(self) -> ModelTrainerConfig:
+        try:
+            logger.info("Inside get_model_trainer_config method")
+            model_trainer_config = self.config.model_trainer
+
+            create_directories([model_trainer_config.root_dir])
+
+            return ModelTrainerConfig(
+                root_dir= model_trainer_config.root_dir,
+                train_npy=model_trainer_config.train_npy,
+                test_npy=model_trainer_config.test_npy,
+                model_name=model_trainer_config.model_name,
+                model_expected_score=const.MODEL_TRAINER_EXPECTED_SCORE,
+                model_fitting_threshold=const.MODEL_TRAINER_FITTING_THRESHOLD
+            )
+
+        except Exception as e:
+            logger.error(f"Error occured inside get_model_trainer_config:{e}")
             raise e

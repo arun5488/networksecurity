@@ -27,3 +27,12 @@ class DataTransformationConfig:
     y_train: Path
     y_test: Path
     knn_inputer: dict
+
+@dataclass
+class ModelTrainerConfig:
+    root_dir: Path
+    train_npy: Path
+    test_npy: Path
+    model_name: Path
+    model_expected_score: float
+    model_fitting_threshold: float
