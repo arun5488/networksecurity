@@ -10,3 +10,4 @@ Flask
 uvicorn
 dataclasses
 python-box
+python-multipart
