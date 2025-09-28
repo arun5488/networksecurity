@@ -117,7 +117,8 @@ class ModelTrainer:
             
             logger.info("saving the best model in artifacts")
             save_object(self.config.model_name, best_model)
-
+            logger.info("saving the model in data folder for s3 sync")
+            save_object(const.FINAL_MODEL, best_model)
 
         except Exception as e:
             logger.error(f"Error occured inside train_model:{e}")
@@ -129,8 +130,7 @@ class ModelTrainer:
             X_train, y_train, X_test, y_test = (self.train_data[:,:-1], self.train_data[:,-1],
                                             self.test_data[:,:-1], self.test_data[:,-1])
             best_model = self.train_model(X_train, y_train, X_test, y_test)
-            logger.info("saving the model in data folder for s3 sync")
-            save_object(const.FINAL_MODEL, best_model)
+
         except Exception as e:
             logger.error(f"error occured inside initiate_model_trainer:{e}")
             raise e
