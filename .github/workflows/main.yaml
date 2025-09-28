@@ -47,6 +47,8 @@ jobs:
           printf "MLFLOW_TRACKING_URI=\"%s\"\n" "${{ secrets.MLFLOW_TRACKING_URI }}" >> .env
           printf "MLFLOW_TRACKING_USERNAME=\"%s\"\n" "${{ secrets.MLFLOW_TRACKING_USERNAME }}" >> .env
           printf "MLFLOW_TRACKING_PASSWORD=\"%s\"\n" "${{ secrets.MLFLOW_TRACKING_PASSWORD }}" >> .env
+          echo 'MONGO_DB_NAME'="${{ secrets.MONGO_DB_NAME }}" >> .env
+          echo 'MONGO_DB_COLLECTION'="${{ secrets.MONGO_DB_COLLECTION }}" >> .env
           # Add more variables as needed
 
       - name: Show .env file content
