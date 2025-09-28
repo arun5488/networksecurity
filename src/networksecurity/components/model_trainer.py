@@ -63,6 +63,8 @@ class ModelTrainer:
                 # track in mlflow
                 if const.ENV_DAGSHUB == 'Y':
                     self.track_mlflow(model_name, y_test, y_pred)
+                else:
+                    logger.info("ENV_DAGSHUB is N, not logging experiments")
 
                 report[list(models.keys())[i]] = [test_model_score, gs.best_params_]
             return report

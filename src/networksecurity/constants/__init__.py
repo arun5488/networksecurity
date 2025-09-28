@@ -20,7 +20,7 @@ FINAL_MODEL = "data/model.pkl"
 ## model_trainer
 MODEL_TRAINER_EXPECTED_SCORE=0.6
 MODEL_TRAINER_FITTING_THRESHOLD= 0.05
-ENV_DAGSHUB='Y'
+ENV_DAGSHUB='N'
 
 #AWS bucket
 AWS_BUCKET = "bsaarun54.networksecurity"
