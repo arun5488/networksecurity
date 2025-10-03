@@ -5,3 +5,5 @@ artifacts/
 __pycache__/
 .venv/
 Network_Data/
+logs/
+*.log
