@@ -1,0 +1,79 @@
+[ 2025-09-21 20:11:06,921 ] 6 src.networksecurity - INFO - Triggering Training Pipeline from main.py
+[ 2025-09-21 20:11:06,921 ] 8 src.networksecurity - INFO - Starting Training Pipeline
+[ 2025-09-21 20:11:06,921 ] 13 src.networksecurity - INFO - Inside initiate_training_pipeline method
+[ 2025-09-21 20:11:06,921 ] 14 src.networksecurity - INFO - Starting Data Ingestion Pipeline from Training Pipeline
+[ 2025-09-21 20:11:06,921 ] 8 src.networksecurity - INFO - Starting Data Ingestion Pipeline
+[ 2025-09-21 20:11:06,921 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:06,921 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:06,931 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:06,931 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:06,935 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:06,935 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:06,937 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:06,939 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:06,939 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:06,941 ] 19 src.networksecurity - INFO - Inside get_data_ingestion_config method
+[ 2025-09-21 20:11:06,941 ] 21 src.networksecurity - INFO - Creating artifacts directory for data_ingestion
+[ 2025-09-21 20:11:06,941 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:06,945 ] 29 src.networksecurity - INFO - Directory created at: artifacts\data_ingestion
+[ 2025-09-21 20:11:06,947 ] 13 src.networksecurity - INFO - Inside initiate_data_ingestion_pipeline method
+[ 2025-09-21 20:11:06,947 ] 13 src.networksecurity - INFO - Starting Data Ingestion
+[ 2025-09-21 20:11:06,949 ] 36 src.networksecurity - INFO - Inside connect_mongodb method
+[ 2025-09-21 20:11:07,156 ] 39 src.networksecurity - INFO - Connected to MongoDB successfully
+[ 2025-09-21 20:11:07,156 ] 37 src.networksecurity - INFO - Inside initiate_data_ingestion method
+[ 2025-09-21 20:11:07,158 ] 20 src.networksecurity - INFO - Inside export_collection_as_dataframe method
+[ 2025-09-21 20:11:09,012 ] 28 src.networksecurity - INFO - Data exported as dataframe
+[ 2025-09-21 20:11:09,012 ] 39 src.networksecurity - INFO - Saving raw data into csv file
+[ 2025-09-21 20:11:09,206 ] 42 src.networksecurity - INFO - Raw data saved successfully
+[ 2025-09-21 20:11:09,250 ] 16 src.networksecurity - INFO - Data Ingestion Pipeline completed successfully
+[ 2025-09-21 20:11:09,268 ] 16 src.networksecurity - INFO - Data Ingestion Pipeline completed
+[ 2025-09-21 20:11:09,288 ] 17 src.networksecurity - INFO - Starting Data validation Pipeline from Training Pipeline
+[ 2025-09-21 20:11:09,304 ] 7 src.networksecurity - INFO - Initializing DataValidationPipeline
+[ 2025-09-21 20:11:09,318 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:09,380 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,402 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:09,404 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,407 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:09,413 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,418 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:09,420 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:09,420 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:09,420 ] 36 src.networksecurity - INFO - Inside get_data_validation_config method
+[ 2025-09-21 20:11:09,436 ] 38 src.networksecurity - INFO - creating directory for data_validation stage
+[ 2025-09-21 20:11:09,436 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:09,436 ] 29 src.networksecurity - INFO - Directory created at: artifacts\data_validation
+[ 2025-09-21 20:11:09,439 ] 12 src.networksecurity - INFO - Inside initiate_data_validation_pipeline
+[ 2025-09-21 20:11:09,453 ] 9 src.networksecurity - INFO - Initiatlized Data Validation
+[ 2025-09-21 20:11:09,453 ] 17 src.networksecurity - INFO -  Inside initiate_data_validation method
+[ 2025-09-21 20:11:09,559 ] 26 src.networksecurity - INFO - All columns are present in the raw data
+[ 2025-09-21 20:11:09,567 ] 29 src.networksecurity - INFO - Raw data length:11055
+[ 2025-09-21 20:11:09,567 ] 30 src.networksecurity - INFO - train data length:8844
+[ 2025-09-21 20:11:09,572 ] 31 src.networksecurity - INFO - test data length:2211
+[ 2025-09-21 20:11:09,684 ] 34 src.networksecurity - INFO - train data saved into: artifacts/data_validation/train.csv
+[ 2025-09-21 20:11:09,710 ] 36 src.networksecurity - INFO - test data saved into: artifacts/data_validation/test.csv
+[ 2025-09-21 20:11:09,714 ] 19 src.networksecurity - INFO - Data Validation stage complete
+[ 2025-09-21 20:11:09,714 ] 20 src.networksecurity - INFO - Starting Data Transformation Pipeline
+[ 2025-09-21 20:11:09,714 ] 7 src.networksecurity - INFO - Initializing Data Transformation Pipeline
+[ 2025-09-21 20:11:09,714 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 20:11:09,714 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,717 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 20:11:09,717 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,721 ] 18 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 20:11:09,721 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 20:11:09,723 ] 18 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 20:11:09,726 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:09,727 ] 29 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 20:11:09,729 ] 55 src.networksecurity - INFO - Inside get_data_transformation_config method
+[ 2025-09-21 20:11:09,729 ] 26 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 20:11:09,729 ] 29 src.networksecurity - INFO - Directory created at: artifacts/data_transformation
+[ 2025-09-21 20:11:09,729 ] 12 src.networksecurity - INFO - Inside initiate_data_transformartion
+[ 2025-09-21 20:11:09,729 ] 12 src.networksecurity - INFO - Initializing DataTransformation
+[ 2025-09-21 20:11:09,729 ] 42 src.networksecurity - INFO - Inside initiate_data_transformation method
+[ 2025-09-21 20:11:09,779 ] 26 src.networksecurity - INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[ 2025-09-21 20:11:09,793 ] 31 src.networksecurity - INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-09-21 20:11:09,804 ] 53 src.networksecurity - INFO - Inside save_numpy_array_data method
+[ 2025-09-21 20:11:09,813 ] 54 src.networksecurity - INFO - train.npy saved in: artifacts/data_transformation/train.npy
+[ 2025-09-21 20:11:09,879 ] 72 src.networksecurity - ERROR - error occured inside initiate_data_transformation:all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 8844 and the array at index 1 has size 2211
+[ 2025-09-21 20:11:09,882 ] 16 src.networksecurity - ERROR - error in initiate_data_transformation_pipeline:all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 8844 and the array at index 1 has size 2211
+[ 2025-09-21 20:11:09,882 ] 24 src.networksecurity - ERROR - Error occured in initiate_training_pipeline: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 8844 and the array at index 1 has size 2211
+[ 2025-09-21 20:11:09,882 ] 10 src.networksecurity - ERROR - Error occured in main.py: all the input array dimensions except for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 8844 and the array at index 1 has size 2211

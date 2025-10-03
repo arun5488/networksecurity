@@ -1,0 +1,30 @@
+[ 2025-09-21 15:13:18,262 ] 6 src.networksecurity - INFO - Triggering Training Pipeline from main.py
+[ 2025-09-21 15:13:18,262 ] 6 src.networksecurity - INFO - Starting Training Pipeline
+[ 2025-09-21 15:13:18,262 ] 11 src.networksecurity - INFO - Inside initiate_training_pipeline method
+[ 2025-09-21 15:13:18,262 ] 12 src.networksecurity - INFO - Starting Data Ingestion Pipeline from Training Pipeline
+[ 2025-09-21 15:13:18,274 ] 8 src.networksecurity - INFO - Starting Data Ingestion Pipeline
+[ 2025-09-21 15:13:18,274 ] 10 src.networksecurity - INFO - Initializing Configuration Manager
+[ 2025-09-21 15:13:18,295 ] 13 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 15:13:18,305 ] 16 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-21 15:13:18,306 ] 13 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 15:13:18,308 ] 16 src.networksecurity - INFO - yaml file: schema.yaml loaded successfully
+[ 2025-09-21 15:13:18,308 ] 13 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-21 15:13:18,308 ] 16 src.networksecurity - INFO - yaml file: params.yaml loaded successfully
+[ 2025-09-21 15:13:18,312 ] 24 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 15:13:18,315 ] 27 src.networksecurity - INFO - Directory created at: artifacts
+[ 2025-09-21 15:13:18,320 ] 19 src.networksecurity - INFO - Inside get_data_ingestion_config method
+[ 2025-09-21 15:13:18,321 ] 21 src.networksecurity - INFO - Creating artifacts directory for data_ingestion
+[ 2025-09-21 15:13:18,322 ] 24 src.networksecurity - INFO - Inside create_directories method
+[ 2025-09-21 15:13:18,323 ] 27 src.networksecurity - INFO - Directory created at: artifacts\data_ingestion
+[ 2025-09-21 15:13:18,323 ] 13 src.networksecurity - INFO - Inside initiate_data_ingestion_pipeline method
+[ 2025-09-21 15:13:18,324 ] 13 src.networksecurity - INFO - Starting Data Ingestion
+[ 2025-09-21 15:13:18,324 ] 34 src.networksecurity - INFO - Inside connect_mongodb method
+[ 2025-09-21 15:13:18,548 ] 37 src.networksecurity - INFO - Connected to MongoDB successfully
+[ 2025-09-21 15:13:18,551 ] 37 src.networksecurity - INFO - Inside initiate_data_ingestion method
+[ 2025-09-21 15:13:18,551 ] 20 src.networksecurity - INFO - Inside export_collection_as_dataframe method
+[ 2025-09-21 15:13:20,683 ] 28 src.networksecurity - INFO - Data exported as dataframe
+[ 2025-09-21 15:13:20,683 ] 39 src.networksecurity - INFO - Saving raw data into csv file
+[ 2025-09-21 15:13:20,798 ] 42 src.networksecurity - INFO - Raw data saved successfully
+[ 2025-09-21 15:13:20,798 ] 16 src.networksecurity - INFO - Data Ingestion Pipeline completed successfully
+[ 2025-09-21 15:13:20,802 ] 14 src.networksecurity - INFO - Data Ingestion Pipeline completed
+[ 2025-09-21 15:13:20,804 ] 8 src.networksecurity - INFO - Training Pipeline completed successfully

@@ -1,0 +1,19 @@
+[ 2025-09-28 16:31:07,557 ] 6 src.networksecurity - INFO - Triggering Training Pipeline from main.py
+[ 2025-09-28 16:31:07,559 ] 13 src.networksecurity - INFO - Starting Training Pipeline
+[ 2025-09-28 16:31:07,559 ] 15 src.networksecurity - INFO - Inside read_yaml method
+[ 2025-09-28 16:31:07,580 ] 18 src.networksecurity - INFO - yaml file: config/config.yaml loaded successfully
+[ 2025-09-28 16:31:07,582 ] 5 src.networksecurity - INFO - Initialized S3Sync class
+[ 2025-09-28 16:31:07,582 ] 57 src.networksecurity - INFO - saving artifacts to s3 bucket
+[ 2025-09-28 16:31:07,582 ] 19 src.networksecurity - INFO - Inside sync_artifacts_to_s3
+[ 2025-09-28 16:31:07,595 ] 21 src.networksecurity - INFO - artifacts folder:artifacts
+[ 2025-09-28 16:31:07,596 ] 23 src.networksecurity - INFO - s3 artifacts folder:s3://bsaarun54.networksecurity/artifact/artifacts
+[ 2025-09-28 16:31:07,596 ] 8 src.networksecurity - INFO - Inside sync_local_to_s3 method
+[ 2025-09-28 16:31:07,596 ] 9 src.networksecurity - INFO - local file path:artifacts
+[ 2025-09-28 16:31:07,596 ] 10 src.networksecurity - INFO - aws bucket URL: s3://bsaarun54.networksecurity/artifact/artifacts
+[ 2025-09-28 16:31:23,315 ] 31 src.networksecurity - INFO - Inside sync_artifacts_to_s3
+[ 2025-09-28 16:31:23,315 ] 33 src.networksecurity - INFO - data folder:data
+[ 2025-09-28 16:31:23,315 ] 35 src.networksecurity - INFO - s3 artifacts folder:s3://bsaarun54.networksecurity/data/data
+[ 2025-09-28 16:31:23,315 ] 8 src.networksecurity - INFO - Inside sync_local_to_s3 method
+[ 2025-09-28 16:31:23,315 ] 9 src.networksecurity - INFO - local file path:data
+[ 2025-09-28 16:31:23,315 ] 10 src.networksecurity - INFO - aws bucket URL: s3://bsaarun54.networksecurity/data/data
+[ 2025-09-28 16:31:37,027 ] 8 src.networksecurity - INFO - Training Pipeline completed successfully
